@@ -1,9 +1,13 @@
 /* Estilos del header / barra de navegación principal */
 
 /* Reseteo el margen y padding del body para que el nav toque los bordes */
+/* min-height 100vh + flex column para que el footer quede siempre al fondo */
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Contenedor del nav - uso flex para alinear todo en fila */
@@ -46,7 +50,7 @@ body {
     align-items: center;
     gap: 0.4rem;
     /* espacio entre el icono y el texto */
-    color: #FFFFFF;
+    color: var(--TextoClaro);
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
@@ -70,7 +74,7 @@ body {
 .header-nav__link-icon {
     width: 18px;
     height: 18px;
-    fill: #FFFFFF;
+    fill: var(--TextoClaro);
     flex-shrink: 0;
 }
 
@@ -95,7 +99,7 @@ body {
 .header-nav__bell svg {
     width: 22px;
     height: 22px;
-    fill: #FFFFFF;
+    fill: var(--TextoClaro);
 }
 
 /* Barrita vertical que separa los links de la info del usuario */
@@ -123,7 +127,7 @@ body {
 
 /* "Hola, Ignacio" */
 .header-nav__user-name {
-    color: #FFFFFF;
+    color: var(--TextoClaro);
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
@@ -158,5 +162,5 @@ body {
 .header-nav__user-icon svg {
     width: 20px;
     height: 20px;
-    fill: #FFFFFF;
+    fill: var(--TextoClaro);
 }

@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #DC2626;
+    background-color: var(--GuardiaRojo);
     padding: 0.9rem 1.5rem;
     margin-right: 10.5rem;
     border-radius: 14px;
@@ -49,7 +49,7 @@
 /* Cuando haces hover se queda quieto en el rojo normal */
 .guardia-banner:hover {
     animation: none;
-    background-color: #DC2626;
+    background-color: var(--GuardiaRojo);
     box-shadow: 0 0 12px rgba(220, 38, 38, 0.5);
 }
 
@@ -58,12 +58,12 @@
 
     0%,
     100% {
-        background-color: #DC2626;
+        background-color: var(--GuardiaRojo);
         box-shadow: 0 0 6px rgba(220, 38, 38, 0.3);
     }
 
     50% {
-        background-color: #F87171;
+        background-color: var(--GuardiaRojoClaro);
         box-shadow: 0 0 28px rgba(248, 113, 113, 0.7);
     }
 }
@@ -75,7 +75,7 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    background-color: #F87171;
+    background-color: var(--GuardiaRojoClaro);
     border-radius: 10px;
     flex-shrink: 0;
 }
@@ -83,7 +83,7 @@
 .guardia-banner__icon-box svg {
     width: 26px;
     height: 26px;
-    fill: #FFFFFF;
+    fill: var(--TextoClaro);
 }
 
 /* Textos dentro del banner (titulo + subtitulo) */
@@ -94,7 +94,7 @@
 }
 
 .guardia-banner__title {
-    color: #FFFFFF;
+    color: var(--TextoClaro);
     font-family: 'Inter', sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
@@ -117,5 +117,325 @@
 .guardia-banner__arrow svg {
     width: 24px;
     height: 24px;
-    fill: #FFFFFF;
+    fill: var(--TextoClaro);
+}
+
+/* ========================================
+   BOTONES DE ACCIÓN (Pedir Turno, Mis Turnos)
+   ======================================== */
+
+/* Contenedor de los dos botones - flex en fila */
+.action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 3rem 0 3rem;
+    /* mismo padding horizontal que la seccion de arriba */
+    font-family: 'Inter', sans-serif;
+    margin-top: 2rem;
+}
+
+/* Cada boton grande - fondo tintado del color de su icono */
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 1;
+    padding: 3rem 1.5rem;
+    /* bien altos para ocupar mas espacio */
+    /* bien altos */
+    border-radius: 14px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, filter 0.2s ease;
+    text-decoration: none;
+    border: none;
+    border-left: 4px solid transparent;
+    /* borde izquierdo grueso de color */
+}
+
+.action-btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    filter: brightness(0.97);
+}
+
+/* Variante azul del boton - fondo celeste clarito, borde izquierdo azul */
+.action-btn--blue {
+    background-color: rgba(74, 137, 172, 0.08);
+    border-left-color: var(--Iconos);
+}
+
+/* Variante verde del boton - fondo verde clarito, borde izquierdo verde */
+.action-btn--green {
+    background-color: rgba(34, 197, 94, 0.08);
+    border-left-color: var(--BotonVerde);
+}
+
+/* Flechita a la derecha del boton */
+.action-btn__arrow {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* empuja la flecha a la derecha */
+}
+
+.action-btn__arrow svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--Textos);
+    opacity: 0.35;
+}
+
+/* El primer boton arranca alineado con el H1 */
+.action-btn:first-child {
+    margin-left: 12rem;
+}
+
+/* El segundo boton termina alineado con el banner de guardia */
+.action-btn:last-child {
+    margin-right: 10.5rem;
+}
+
+/* Cuadradito con el icono adentro */
+.action-btn__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+/* Variante azul para "Pedir Turno" */
+.action-btn__icon-box--blue {
+    background-color: var(--Iconos);
+}
+
+/* Variante verde para "Mis Turnos" */
+.action-btn__icon-box--green {
+    background-color: var(--BotonVerde);
+}
+
+.action-btn__icon-box svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--Fondo);
+    /* icono blanco (color de fondo) */
+}
+
+/* Textos del boton (titulo + descripcion) */
+.action-btn__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.action-btn__title {
+    color: var(--Textos);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.action-btn__desc {
+    color: var(--Textos);
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.7;
+    /* un poco mas apagado que el titulo */
+}
+
+/* ========================================
+   SECCION HEADER (Explorar Especialidades, etc)
+   ======================================== */
+
+/* Contenedor del titulo de seccion + link "Ver todas" */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 3rem 0 3rem;
+    /* mas espacio arriba para separar de los botones */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Titulo de seccion - mas chico que el H1 principal */
+.section-header__title {
+    color: var(--H1);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 12rem;
+    /* alineado con el H1 de arriba */
+}
+
+/* Link "Ver todas" - celeste sin fondo */
+.section-header__link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--FondoSecundario);
+    /* celeste */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* un pelin mas grueso */
+    margin-right: 10.5rem;
+    /* alineado con el borde derecho de los botones */
+    transition: opacity 0.2s ease;
+}
+
+.section-header__link:hover {
+    opacity: 0.75;
+}
+
+/* Cuando haces hover en el link, la flechita se mueve un poquito a la derecha */
+.section-header__link:hover .section-header__link-arrow {
+    transform: translateX(3px);
+}
+
+/* Flechita al lado del link */
+.section-header__link-arrow {
+    width: 1em;
+    /* misma altura que el texto, punta arriba al techo y abajo al piso */
+    height: 5em;
+    fill: var(--FondoSecundario);
+    transition: transform 0.2s ease;
+    /* transicion suave para el movimiento */
+}
+
+/* ========================================
+   TARJETAS DE ESPECIALIDADES
+   ======================================== */
+
+/* Grilla de 4 columnas para las tarjetas */
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1.2rem 3rem 0 3rem;
+    margin-left: 12rem;
+    /* alineado con el H1 */
+    margin-right: 10.5rem;
+    /* alineado con el borde derecho */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Cada tarjeta individual */
+.especialidad-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: var(--Fondo);
+    border-radius: 14px;
+    border: 1px solid rgba(79, 82, 87, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+    text-decoration: none;
+}
+
+.especialidad-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Cuadradito con el icono de la especialidad */
+.especialidad-card__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.especialidad-card__icon-box svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* Variantes de color para cada especialidad */
+.especialidad-card__icon-box--red {
+    background-color: #FEE2E2;
+    /* rosadito suave */
+}
+
+.especialidad-card__icon-box--red svg {
+    fill: #EF4444;
+    color: #EF4444;
+    /* para currentColor en iconos outline */
+    /* rojo */
+}
+
+.especialidad-card__icon-box--blue {
+    background-color: #DBEAFE;
+    /* celeste suave */
+}
+
+.especialidad-card__icon-box--blue svg {
+    fill: var(--Iconos);
+    color: var(--Iconos);
+    /* para currentColor en iconos outline */
+    /* azul */
+}
+
+.especialidad-card__icon-box--yellow {
+    background-color: #FEF3C7;
+    /* amarillo suave */
+}
+
+.especialidad-card__icon-box--yellow svg {
+    fill: #F59E0B;
+    /* naranja/amarillo */
+}
+
+.especialidad-card__icon-box--teal {
+    background-color: #CCFBF1;
+    /* verde agua suave */
+}
+
+.especialidad-card__icon-box--teal svg {
+    fill: #14B8A6;
+    /* teal */
+}
+
+/* Titulo de la especialidad */
+.especialidad-card__title {
+    color: var(--Textos);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+}
+
+/* Descripcion corta */
+.especialidad-card__desc {
+    color: var(--Textos);
+    font-size: 0.82rem;
+    font-weight: 400;
+    opacity: 0.65;
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+    flex-grow: 1;
+    /* empuja el link "Consultar" al fondo */
+}
+
+/* Link "Consultar >" al final de la tarjeta */
+.especialidad-card__link {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    color: var(--FondoSecundario);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.especialidad-card:hover .especialidad-card__link {
+    opacity: 0.75;
+}
+
+.especialidad-card__link svg {
+    width: 1em;
+    height: 1em;
+    fill: var(--FondoSecundario);
 }

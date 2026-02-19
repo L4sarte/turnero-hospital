@@ -1,0 +1,29 @@
+/* Estilos del footer */
+
+/* Contenedor principal del footer - siempre al fondo */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 1.5rem 3rem;
+    margin-top: auto;
+    /* empuja el footer al fondo de la pagina */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--Textos);
+    opacity: 0.5;
+    /* suave, no roba protagonismo */
+    border-top: 1px solid rgba(79, 82, 87, 0.15);
+    /* bordecito sutil arriba */
+}
+
+/* Separador punto medio */
+.footer__separator {
+    margin: 0 0.2rem;
+}
+
+/* Nombre Sion Tech - un poquito mas destacado */
+.footer__brand {
+    font-weight: 600;
+}

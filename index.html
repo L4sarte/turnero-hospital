@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/globales.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/panel.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 
 <body>
@@ -118,6 +119,160 @@
         </div>
 
     </section>
+
+    <!-- Botones de accion: Pedir Turno y Mis Turnos -->
+    <section class="action-buttons">
+
+        <!-- Boton 1: Pedir Turno - fondo celeste clarito, borde izq azul -->
+        <a href="#" class="action-btn action-btn--blue">
+            <div class="action-btn__icon-box action-btn__icon-box--blue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- Calendario con + en la esquina inferior derecha -->
+                    <path
+                        d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h7v-2H5V8h14v3h2V5c0-1.1-.9-2-2-2z" />
+                    <path d="M19 15h-2v2h-2v2h2v2h2v-2h2v-2h-2v-2z" />
+                </svg>
+            </div>
+            <div class="action-btn__text">
+                <span class="action-btn__title">Pedir Turno</span>
+                <span class="action-btn__desc">Reserva una cita en pocos pasos.</span>
+            </div>
+            <!-- Flechita a la derecha -->
+            <div class="action-btn__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+            </div>
+        </a>
+
+        <!-- Boton 2: Mis Turnos - fondo verde clarito, borde izq verde -->
+        <a href="#" class="action-btn action-btn--green">
+            <div class="action-btn__icon-box action-btn__icon-box--green">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- Calendario con un tilde en el centro -->
+                    <path
+                        d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-5.04-6.71l-3.54 3.54-1.41-1.41-1.06 1.06 2.47 2.47 4.6-4.6-1.06-1.06z" />
+                </svg>
+            </div>
+            <div class="action-btn__text">
+                <span class="action-btn__title">Mis Turnos</span>
+                <span class="action-btn__desc">Revisa tus próximas citas y el historial médico.</span>
+            </div>
+            <!-- Flechita a la derecha -->
+            <div class="action-btn__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+            </div>
+        </a>
+
+    </section>
+
+    <!-- Seccion: Explorar Especialidades - titulo a la izq, link "Ver todas" a la der -->
+    <section class="section-header">
+        <h2 class="section-header__title">Explorar Especialidades</h2>
+        <a href="#" class="section-header__link">
+            Ver todas
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="section-header__link-arrow">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+            </svg>
+        </a>
+    </section>
+
+    <!-- Grilla de tarjetas de especialidades -->
+    <section class="especialidades-grid">
+
+        <!-- Card 1: Cardiología - icono rojo/rosado -->
+        <a href="#" class="especialidad-card">
+            <div class="especialidad-card__icon-box especialidad-card__icon-box--red">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- Corazón outline con linea de frecuencia cardiaca -->
+                    <path
+                        d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5 18.5 5 20 6.5 20 8.5c0 2.89-3.14 5.74-7.9 10.05z"
+                        fill="currentColor" />
+                    <polyline points="3,12 8,12 10,8 12,15 14,10 16,12 21,12" fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <h3 class="especialidad-card__title">Cardiología</h3>
+            <p class="especialidad-card__desc">Cuidado integral del corazón y control de presión arterial.</p>
+            <span class="especialidad-card__link">
+                Consultar
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+            </span>
+        </a>
+
+        <!-- Card 2: Odontología - icono azul -->
+        <a href="#" class="especialidad-card">
+            <div class="especialidad-card__icon-box especialidad-card__icon-box--blue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- Muela outline (solo bordes) -->
+                    <path
+                        d="M12 2c-1.8 0-3.4.6-4.6 1.7C6.2 4.8 5.5 6.4 5.5 8.2c0 1.5.5 2.8 1.3 3.8.3.4.5.9.5 1.4l.5 5.1c.1 1 .9 1.5 1.7 1.5s1.2-.3 1.5-.8l1-1.7 1 1.7c.3.5.8.8 1.5.8s1.6-.5 1.7-1.5l.5-5.1c0-.5.2-1 .5-1.4.8-1 1.3-2.3 1.3-3.8 0-1.8-.7-3.4-1.9-4.5C14.4 2.6 13.3 2 12 2z"
+                        fill="none" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+            <h3 class="especialidad-card__title">Odontología</h3>
+            <p class="especialidad-card__desc">Tratamientos dentales y salud bucal preventiva.</p>
+            <span class="especialidad-card__link">
+                Consultar
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+            </span>
+        </a>
+
+        <!-- Card 3: Pediatría - icono amarillo/naranja -->
+        <a href="#" class="especialidad-card">
+            <div class="especialidad-card__icon-box especialidad-card__icon-box--yellow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- Carita feliz (niño) -->
+                    <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                </svg>
+            </div>
+            <h3 class="especialidad-card__title">Pediatría</h3>
+            <p class="especialidad-card__desc">Atención médica especializada para bebés y niños.</p>
+            <span class="especialidad-card__link">
+                Consultar
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+            </span>
+        </a>
+
+        <!-- Card 4: Clínica Médica - icono verde/teal -->
+        <a href="#" class="especialidad-card">
+            <div class="especialidad-card__icon-box especialidad-card__icon-box--teal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- Estetoscopio simplificado -->
+                    <path
+                        d="M19 8c-1.66 0-3 1.34-3 3 0 1.3.84 2.4 2 2.82V17c0 1.1-.9 2-2 2s-2-.9-2-2v-1c0-2.21-1.79-4-4-4H9V8.82C10.16 8.4 11 7.3 11 6c0-1.66-1.34-3-3-3S5 4.34 5 6c0 1.3.84 2.4 2 2.82V12c0 2.21 1.79 4 4 4h1v1c0 2.21 1.79 4 4 4s4-1.79 4-4v-3.18c1.16-.42 2-1.52 2-2.82 0-1.66-1.34-3-3-3zm-11-2c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1zm11 5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+            </div>
+            <h3 class="especialidad-card__title">Clínica Médica</h3>
+            <p class="especialidad-card__desc">Consultas generales, diagnósticos y derivaciones.</p>
+            <span class="especialidad-card__link">
+                Consultar
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+            </span>
+        </a>
+
+    </section>
+
+    <!-- Footer con copyright y credito -->
+    <footer class="footer">
+        <span>© <span id="current-year"></span> Hospital Centro de Salud Municipal Malvinas Argentinas</span>
+        <span class="footer__separator">·</span>
+        <span>Desarrollado por <span class="footer__brand">Sion Tech</span></span>
+    </footer>
+
+    <!-- Script principal - inyecta el año y futuro JS -->
+    <script src="scripts/main.js"></script>
 
 </body>
 
