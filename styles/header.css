@@ -1,0 +1,162 @@
+/* Estilos del header / barra de navegación principal */
+
+/* Reseteo el margen y padding del body para que el nav toque los bordes */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del nav - uso flex para alinear todo en fila */
+.header-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.6rem 2rem;
+    background-color: var(--FondoSecundario);
+    box-sizing: border-box;
+}
+
+/* Link del logo, para que sea clickeable y te lleve al inicio */
+.header-nav__logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Logo del imagotipo, queda a la izquierda */
+.header-nav__logo {
+    height: 60px;
+    width: auto;
+    margin-left: 12rem;
+}
+
+/* Zona de links - se empuja a la derecha con margin-left auto */
+.header-nav__links {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    /* espacio entre cada item */
+    margin-left: auto;
+    margin-right: 12rem;
+}
+
+/* Cada link del nav (Inicio, Mis Turnos, etc) */
+.header-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    /* espacio entre el icono y el texto */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.45rem 0.85rem;
+    /* padding para que el hover rectangular se vea bien */
+    border-radius: 8px;
+    /* bordes redondeados */
+    transition: background-color 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+/* Hover con fondo --Hover y forma rectangular redondeada */
+/* .active es para marcar la seccion en la que estas (ej: Inicio) */
+.header-nav__link:hover,
+.header-nav__link.active {
+    background-color: var(--Hover);
+}
+
+/* Iconito que va a la izquierda de cada link (casita, calendario) */
+.header-nav__link-icon {
+    width: 18px;
+    height: 18px;
+    fill: #FFFFFF;
+    flex-shrink: 0;
+}
+
+/* Campanita de notificaciones */
+.header-nav__bell {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.45rem 0.65rem;
+    /* padding mas angosto para que quede ovalado */
+    border-radius: 50px;
+    /* bien redondeado, estilo ovalo */
+    transition: background-color 0.2s ease;
+    position: relative;
+    /* por si mas adelante le agrego un badge con el conteo */
+}
+
+.header-nav__bell:hover {
+    background-color: var(--Hover);
+}
+
+.header-nav__bell svg {
+    width: 22px;
+    height: 22px;
+    fill: #FFFFFF;
+}
+
+/* Barrita vertical que separa los links de la info del usuario */
+.header-nav__divider {
+    width: 1px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+}
+
+/* Bloque de info del usuario (nombre + rol + icono) */
+.header-nav__user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Nombre y rol apilados en columna */
+.header-nav__user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    line-height: 1.3;
+}
+
+/* "Hola, Ignacio" */
+.header-nav__user-name {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* "Paciente" - el rol, un poco mas chiquito y transparente */
+.header-nav__user-role {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+/* Circulito con el icono del usuario */
+.header-nav__user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.header-nav__user-icon:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.header-nav__user-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
+}

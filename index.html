@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnos - Hospital Centro De Salud Municipal Malvinas Argentinas</title>
+
+    <!-- Fuente Inter de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/globales.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/panel.css">
+</head>
+
+<body>
+
+    <!-- Header principal con el nav -->
+    <header>
+        <nav class="header-nav">
+
+            <!-- Logo a la izquierda, linkea al inicio -->
+            <a href="#" class="header-nav__logo-link">
+                <img src="src/logo.png" alt="Logo Turnero - Hospital Malvinas Argentinas" class="header-nav__logo">
+            </a>
+
+            <!-- Todo esto se empuja a la derecha -->
+            <div class="header-nav__links">
+
+                <!-- Icono casita + Inicio -->
+                <a href="#" class="header-nav__link active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="header-nav__link-icon">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                    </svg>
+                    Inicio
+                </a>
+
+                <!-- Icono calendario + Mis Turnos -->
+                <a href="#" class="header-nav__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="header-nav__link-icon">
+                        <path
+                            d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
+                    </svg>
+                    Mis Turnos
+                </a>
+
+                <!-- Campanita de notificaciones (SVG inline) -->
+                <div class="header-nav__bell" title="Notificaciones">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C10.9 2 10 2.9 10 4C10 4.1 10 4.2 10 4.3C7.7 5.1 6 7.3 6 10V16L4 18V19H20V18L18 16V10C18 7.3 16.3 5.1 14 4.3C14 4.2 14 4.1 14 4C14 2.9 13.1 2 12 2ZM12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22Z" />
+                    </svg>
+                </div>
+
+                <!-- Barrita separadora -->
+                <div class="header-nav__divider"></div>
+
+                <!-- Info del usuario - por ahora es estatico, despues lo hacemos dinamico con el back -->
+                <div class="header-nav__user">
+
+                    <div class="header-nav__user-info">
+                        <span class="header-nav__user-name">Hola, Ignacio</span>
+                        <span class="header-nav__user-role">Paciente</span>
+                    </div>
+
+                    <!-- Icono de usuario, despues se puede cambiar por foto de perfil -->
+                    <div class="header-nav__user-icon" title="Mi perfil">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 12C14.2 12 16 10.2 16 8C16 5.8 14.2 4 12 4C9.8 4 8 5.8 8 8C8 10.2 9.8 12 12 12ZM12 14C9.3 14 4 15.3 4 18V20H20V18C20 15.3 14.7 14 12 14Z" />
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Seccion del panel: titulo a la izq, banner de guardia a la der -->
+    <section class="panel-section">
+
+        <!-- Titulo y descripcion -->
+        <div class="panel-section__info">
+            <h1 class="panel-section__title">Panel de Paciente</h1>
+            <p class="panel-section__desc">Gestiona tus turnos y accede a los servicios médicos fácilmente.</p>
+        </div>
+
+        <!-- Banner de guardia 24hs - rectangulo rojo que parpadea -->
+        <div class="guardia-banner">
+
+            <!-- Cuadradito rosa con icono de ambulancia -->
+            <div class="guardia-banner__icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5H15V3H9v2H6.5c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+                </svg>
+            </div>
+
+            <!-- Textos del banner -->
+            <div class="guardia-banner__text">
+                <span class="guardia-banner__title">Guardia 24hs</span>
+                <span class="guardia-banner__subtitle">Urgencias y emergencias</span>
+            </div>
+
+            <!-- Flechita a la derecha -->
+            <div class="guardia-banner__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
