@@ -106,7 +106,7 @@ body {
 .header-nav__divider {
     width: 1px;
     height: 36px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--BlancoOpaco-40);
     flex-shrink: 0;
 }
 
@@ -135,7 +135,7 @@ body {
 
 /* "Paciente" - el rol, un poco mas chiquito y transparente */
 .header-nav__user-role {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--BlancoOpaco-80);
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     font-weight: 400;
@@ -149,18 +149,164 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--BlancoOpaco-20);
     cursor: pointer;
     transition: background-color 0.2s ease;
     flex-shrink: 0;
 }
 
 .header-nav__user-icon:hover {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: var(--BlancoOpaco-35);
 }
 
-.header-nav__user-icon svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--TextoClaro);
+/* ========================================
+   RESPONSIVE DESIGN (MOBILE & DESKTOP)
+   ======================================== */
+
+/* Desktop view default */
+.header-mobile,
+.bottom-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    /* Ocultar header de escritorio */
+    .header-desktop {
+        display: none;
+    }
+
+    /* Mostrar header mobile */
+    .header-mobile {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--FondoSecundario);
+        padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+        border-radius: 0 0 2.5rem 2.5rem;
+        gap: 1.8rem;
+        box-shadow: 0 4px 15px var(--FondoSecundarioOpaco);
+    }
+
+    /* Fila superior: Logo e Info + Avatar */
+    .header-mobile__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-mobile__hospital-info {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .header-mobile__welcome {
+        color: var(--BlancoOpaco-85);
+        font-size: 0.82rem;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .header-mobile__hospital-name {
+        color: var(--TextoClaro);
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1.25;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .header-mobile__avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid var(--BlancoOpaco-30);
+        box-shadow: 0 4px 10px var(--NegroOpaco-10);
+    }
+
+    .header-mobile__avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Tarjeta de usuario tipo glassmorphism */
+    .header-mobile__user-card {
+        background-color: var(--BlancoOpaco-12);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--BlancoOpaco-20);
+        padding: 1.2rem;
+        border-radius: 18px;
+        color: var(--TextoClaro);
+        font-family: 'Inter', sans-serif;
+    }
+
+    .header-mobile__user-greeting {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin: 0 0 0.3rem 0;
+    }
+
+    .header-mobile__user-sub {
+        font-size: 0.85rem;
+        opacity: 0.85;
+        margin: 0;
+    }
+
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--Fondo);
+        padding: 0.8rem 0 1.8rem 0;
+        /* extra padding bottom para safe areas */
+        border-top: 1px solid var(--BordeSuave);
+        justify-content: space-around;
+        z-index: 1000;
+        box-shadow: 0 -4px 20px var(--NegroOpaco-05);
+    }
+
+    .bottom-nav__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        gap: 0.3rem;
+        flex: 1;
+        transition: transform 0.2s ease;
+    }
+
+    .bottom-nav__item:active {
+        transform: scale(0.92);
+    }
+
+    .bottom-nav__icon {
+        width: 26px;
+        height: 26px;
+        fill: var(--Slate-400);
+        /* slate-400 */
+        transition: fill 0.2s ease;
+    }
+
+    .bottom-nav__label {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--Slate-400);
+        transition: color 0.2s ease;
+    }
+
+    /* Estado activo Bottom Nav */
+    .bottom-nav__item.active .bottom-nav__icon {
+        fill: var(--Iconos);
+    }
+
+    .bottom-nav__item.active .bottom-nav__label {
+        color: var(--Iconos);
+        font-weight: 700;
+    }
 }

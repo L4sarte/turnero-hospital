@@ -20,8 +20,29 @@
 
 <body>
 
-    <!-- Header principal con el nav -->
-    <header>
+    <!-- Header Mobile: Solo se muestra en pantallas chicas -->
+    <header class="header-mobile">
+        <div class="header-mobile__top">
+            <div class="header-mobile__hospital-info">
+                <div>
+                    <p class="header-mobile__welcome">Bienvenido a</p>
+                    <h1 class="header-mobile__hospital-name">Hospital Municipal<br>Malvinas Argentinas</h1>
+                </div>
+            </div>
+            <!-- Avatar del usuario -->
+            <div class="header-mobile__avatar">
+                <img src="https://ui-avatars.com/api/?name=Ignacio+Paciente&background=random" alt="Avatar Usuario">
+            </div>
+        </div>
+        <!-- Tarjeta de saludo dentro del header azul -->
+        <div class="header-mobile__user-card">
+            <p class="header-mobile__user-greeting">Hola, Ignacio</p>
+            <p class="header-mobile__user-sub">¿Cómo podemos ayudarte hoy?</p>
+        </div>
+    </header>
+
+    <!-- Header principal con el nav (Desktop) -->
+    <header class="header-desktop">
         <nav class="header-nav">
 
             <!-- Logo a la izquierda, linkea al inicio -->
@@ -106,7 +127,7 @@
             <!-- Textos del banner -->
             <div class="guardia-banner__text">
                 <span class="guardia-banner__title">Guardia 24hs</span>
-                <span class="guardia-banner__subtitle">Urgencias y emergencias</span>
+                <span class="guardia-banner__subtitle">Solo para emergencias</span>
             </div>
 
             <!-- Flechita a la derecha -->
@@ -170,7 +191,7 @@
 
     <!-- Seccion: Explorar Especialidades - titulo a la izq, link "Ver todas" a la der -->
     <section class="section-header">
-        <h2 class="section-header__title">Explorar Especialidades</h2>
+        <h2 class="section-header__title">Buscar Especialidad</h2>
         <a href="#" class="section-header__link">
             Ver todas
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="section-header__link-arrow">
@@ -270,6 +291,45 @@
         <span class="footer__separator">·</span>
         <span>Desarrollado por <span class="footer__brand">Sion Tech</span></span>
     </footer>
+
+    <!-- Boton flotante de llamada (FAB): Solo mobile -->
+    <a href="tel:911" class="fab-call">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+        </svg>
+    </a>
+
+    <!-- Bottom Navigation: Solo se muestra en mobile -->
+    <nav class="bottom-nav">
+        <a href="#" class="bottom-nav__item active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bottom-nav__icon">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+            <span class="bottom-nav__label">Inicio</span>
+        </a>
+        <a href="#" class="bottom-nav__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bottom-nav__icon">
+                <path
+                    d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
+            </svg>
+            <span class="bottom-nav__label">Turnos</span>
+        </a>
+        <a href="#" class="bottom-nav__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bottom-nav__icon">
+                <path
+                    d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+            </svg>
+            <span class="bottom-nav__label">Avisos</span>
+        </a>
+        <a href="#" class="bottom-nav__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bottom-nav__icon">
+                <path
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg>
+            <span class="bottom-nav__label">Perfil</span>
+        </a>
+    </nav>
 
     <!-- Script principal - inyecta el año y futuro JS -->
     <script src="scripts/main.js"></script>

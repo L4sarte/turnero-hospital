@@ -150,4 +150,11 @@ Estilos de la sección del panel de paciente:
 | 19/02/2026 | Tarjetas de especialidades: Cardiología, Odontología, Pediatría, Clínica Médica |
 | 19/02/2026 | Íconos outline: corazón con frecuencia cardíaca, muela solo bordes |
 | 19/02/2026 | Footer con copyright ©, año dinámico (JS externo) y crédito Sion Tech |
+| 23/02/2026 | **Diseño Responsive (Mobile)**: Implementación completa siguiendo maquetas |
+| 23/02/2026 | Header Mobile azul, Bottom Nav, FAB de llamada y adaptaciones de grids |
+| 23/02/2026 | Unificación de color de header mobile con desktop y FAB habilitado en desktop |
+| 23/02/2026 | Reemplazo del logo SVG por logo PNG en el header mobile |
+| 23/02/2026 | Restauración de textos de bienvenida en mobile y eliminación completa del logo en esa vista |
+| 19/02/2026 | Íconos outline: corazón con frecuencia cardíaca, muela solo bordes |
+| 19/02/2026 | Footer con copyright ©, año dinámico (JS externo) y crédito Sion Tech |
 

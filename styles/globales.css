@@ -1,31 +1,70 @@
 :root {
-    /* Colores principales */
+    /* 1. Colores de Marca y Principales */
     --H1: #4A89AC;
-    /* titulos principales */
     --Textos: #4F5257;
-    /* textos y parrafos */
     --Iconos: #4A89AC;
-    /* fondo de iconos (cuadradito azul) */
     --Hover: #464188;
-    /* fondo del hover en links del nav */
-
-    /* Fondos */
     --Fondo: #FFFFFF;
-    /* fondo general de la pagina */
     --FondoSecundario: #0ea5e9;
-    /* fondo del nav */
-
-    /* Colores del banner de guardia */
-    --GuardiaRojo: #DC2626;
-    /* rojo base del banner */
-    --GuardiaRojoClaro: #F87171;
-    /* rojo clarito del parpadeo y del cuadradito de ambulancia */
-
-    /* Botones de accion */
-    --BotonVerde: #22C55E;
-    /* cuadradito verde de "Mis Turnos" */
-
-    /* Textos sobre fondos oscuros */
     --TextoClaro: #FFFFFF;
-    /* texto blanco para contraste sobre fondos de color */
+
+    /* 2. Variantes de Opacidad (Blancos/Negros/Marca) */
+    --BlancoOpaco-12: rgba(255, 255, 255, 0.12);
+    --BlancoOpaco-20: rgba(255, 255, 255, 0.2);
+    --BlancoOpaco-30: rgba(255, 255, 255, 0.3);
+    --BlancoOpaco-35: rgba(255, 255, 255, 0.35);
+    --BlancoOpaco-40: rgba(255, 255, 255, 0.4);
+    --BlancoOpaco-80: rgba(255, 255, 255, 0.8);
+    --BlancoOpaco-85: rgba(255, 255, 255, 0.85);
+
+    --NegroOpaco-04: rgba(0, 0, 0, 0.04);
+    --NegroOpaco-05: rgba(0, 0, 0, 0.05);
+    --NegroOpaco-08: rgba(0, 0, 0, 0.08);
+    --NegroOpaco-10: rgba(0, 0, 0, 0.1);
+
+    --IconosOpaco: rgba(74, 137, 172, 0.08);
+    /* Fondo botones accion azules */
+    --FondoSecundarioOpaco: rgba(14, 165, 233, 0.2);
+    /* Sombra header mobile */
+
+    /* 3. Colores de Estado y Semánticos */
+    --GuardiaRojo: #DC2626;
+    --GuardiaRojoClaro: #F87171;
+    --GuardiaRojoOpaco-30: rgba(220, 38, 38, 0.3);
+    --GuardiaRojoOpaco-50: rgba(220, 38, 38, 0.5);
+    --GuardiaRojoClaroOpaco: rgba(248, 113, 113, 0.7);
+
+    --BotonVerde: #22C55E;
+    --BotonVerdeOpaco: rgba(34, 197, 94, 0.08);
+    /* Fondo botones accion verdes */
+
+    /* 4. Bordes y Separadores */
+    --BordeMuySuave: rgba(79, 82, 87, 0.08);
+    --BordeSuave: rgba(79, 82, 87, 0.1);
+    --BordeMedio: rgba(79, 82, 87, 0.15);
+
+    /* 5. Paleta para Especialidades (Foundation/Tailwind inspired) */
+    --Slate-300: #cbd5e1;
+    --Slate-400: #94a3b8;
+
+    --RojoSuave: #FEE2E2;
+    --RojoFuerte: #EF4444;
+
+    --AzulSuave: #DBEAFE;
+
+    --AmarilloSuave: #FEF3C7;
+    --NaranjaAmarillo: #F59E0B;
+
+    --TealSuave: #CCFBF1;
+    --TealFuerte: #14B8A6;
+
+    --Sky-100: #E0F2FE;
+    --Green-100: #DCFCE7;
+    --Green-600: #16A34A;
+
+    /* 6. Otros */
+    --Emerald-500: #10b981;
+    --Emerald-600: #059669;
+    --EmeraldOpaco-40: rgba(16, 185, 129, 0.4);
+    --EmeraldOpaco-70: rgba(16, 185, 129, 0.7);
 }

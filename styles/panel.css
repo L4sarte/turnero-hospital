@@ -50,7 +50,7 @@
 .guardia-banner:hover {
     animation: none;
     background-color: var(--GuardiaRojo);
-    box-shadow: 0 0 12px rgba(220, 38, 38, 0.5);
+    box-shadow: 0 0 12px var(--GuardiaRojoOpaco-50);
 }
 
 /* Parpadeo bien notorio - va de rojo oscuro a rojo claro con glow fuerte */
@@ -59,12 +59,12 @@
     0%,
     100% {
         background-color: var(--GuardiaRojo);
-        box-shadow: 0 0 6px rgba(220, 38, 38, 0.3);
+        box-shadow: 0 0 6px var(--GuardiaRojoOpaco-30);
     }
 
     50% {
         background-color: var(--GuardiaRojoClaro);
-        box-shadow: 0 0 28px rgba(248, 113, 113, 0.7);
+        box-shadow: 0 0 28px var(--GuardiaRojoClaroOpaco);
     }
 }
 
@@ -153,19 +153,19 @@
 }
 
 .action-btn:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px var(--NegroOpaco-08);
     filter: brightness(0.97);
 }
 
 /* Variante azul del boton - fondo celeste clarito, borde izquierdo azul */
 .action-btn--blue {
-    background-color: rgba(74, 137, 172, 0.08);
+    background-color: var(--IconosOpaco);
     border-left-color: var(--Iconos);
 }
 
 /* Variante verde del boton - fondo verde clarito, borde izquierdo verde */
 .action-btn--green {
-    background-color: rgba(34, 197, 94, 0.08);
+    background-color: var(--BotonVerdeOpaco);
     border-left-color: var(--BotonVerde);
 }
 
@@ -326,15 +326,15 @@
     padding: 1.5rem;
     background-color: var(--Fondo);
     border-radius: 14px;
-    border: 1px solid rgba(79, 82, 87, 0.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--BordeSuave);
+    box-shadow: 0 2px 8px var(--NegroOpaco-04);
     cursor: pointer;
     transition: box-shadow 0.2s ease, transform 0.15s ease;
     text-decoration: none;
 }
 
 .especialidad-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px var(--NegroOpaco-08);
     transform: translateY(-2px);
 }
 
@@ -356,19 +356,19 @@
 
 /* Variantes de color para cada especialidad */
 .especialidad-card__icon-box--red {
-    background-color: #FEE2E2;
+    background-color: var(--RojoSuave);
     /* rosadito suave */
 }
 
 .especialidad-card__icon-box--red svg {
-    fill: #EF4444;
-    color: #EF4444;
+    fill: var(--RojoFuerte);
+    color: var(--RojoFuerte);
     /* para currentColor en iconos outline */
     /* rojo */
 }
 
 .especialidad-card__icon-box--blue {
-    background-color: #DBEAFE;
+    background-color: var(--AzulSuave);
     /* celeste suave */
 }
 
@@ -380,22 +380,22 @@
 }
 
 .especialidad-card__icon-box--yellow {
-    background-color: #FEF3C7;
+    background-color: var(--AmarilloSuave);
     /* amarillo suave */
 }
 
 .especialidad-card__icon-box--yellow svg {
-    fill: #F59E0B;
+    fill: var(--NaranjaAmarillo);
     /* naranja/amarillo */
 }
 
 .especialidad-card__icon-box--teal {
-    background-color: #CCFBF1;
+    background-color: var(--TealSuave);
     /* verde agua suave */
 }
 
 .especialidad-card__icon-box--teal svg {
-    fill: #14B8A6;
+    fill: var(--TealFuerte);
     /* teal */
 }
 
@@ -438,4 +438,279 @@
     width: 1em;
     height: 1em;
     fill: var(--FondoSecundario);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN (MOBILE)
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Ocultar sección de panel desktop */
+    .panel-section {
+        display: none;
+    }
+
+    /* Banner de guardia mobile: ancho completo, redondeado, sombra */
+    .guardia-banner {
+        width: auto;
+        margin: -1.8rem 1.5rem 0 1.5rem;
+        /* superpuesto al header azul */
+        padding: 1.5rem;
+        border-radius: 24px;
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.25);
+        justify-content: space-between;
+        animation: none;
+        /* quitamos parpadeo en mobile para que sea mas limpio */
+        position: relative;
+        z-index: 10;
+        background-color: var(--GuardiaRojo);
+    }
+
+    .guardia-banner__icon-box {
+        width: 52px;
+        height: 52px;
+        background-color: var(--BlancoOpaco-20);
+        border-radius: 16px;
+    }
+
+    .guardia-banner__icon-box svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .guardia-banner__text {
+        flex: 1;
+        margin-left: 1rem;
+    }
+
+    .guardia-banner__title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        color: var(--TextoClaro);
+    }
+
+    .guardia-banner__subtitle {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        color: var(--TextoClaro);
+    }
+
+    .guardia-banner__arrow {
+        display: flex;
+        opacity: 1;
+    }
+
+    .guardia-banner__arrow svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--TextoClaro);
+    }
+
+    /* Botones de acción mobile: grid de 2 columnas, diseño vertical */
+    .action-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .action-btn {
+        flex-direction: column;
+        height: 160px;
+        padding: 1.5rem;
+        text-align: center;
+        justify-content: center;
+        gap: 0.8rem;
+        border-radius: 28px;
+        margin: 0 !important;
+        /* quitamos el margin-left/right de desktop */
+        background-color: var(--Fondo) !important;
+        /* fondo blanco en mobile */
+        border: 1px solid var(--BordeMuySuave);
+        box-shadow: 0 4px 15px var(--NegroOpaco-04);
+        border-left: none;
+        /* quitamos el borde izquierdo de desktop */
+    }
+
+    /* Iconos mas grandes y en circulo para mobile */
+    .action-btn__icon-box {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+
+    .action-btn__icon-box--blue {
+        background-color: var(--Sky-100);
+        /* sky-100 */
+    }
+
+    .action-btn__icon-box--blue svg {
+        fill: var(--Iconos);
+    }
+
+    .action-btn__icon-box--green {
+        background-color: var(--Green-100);
+        /* green-100 */
+    }
+
+    .action-btn__icon-box--green svg {
+        fill: var(--Green-600);
+        /* green-600 */
+    }
+
+    .action-btn__title {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .action-btn__desc {
+        display: none;
+        /* ocultamos descripcion en mobile para que quepa bien */
+    }
+
+    .action-btn__arrow {
+        display: none;
+        /* ocultamos flecha en mobile */
+    }
+
+    /* Seccion header (titulo + link) */
+    .section-header {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    .section-header__title {
+        margin-left: 0;
+        font-size: 1.25rem;
+    }
+
+    .section-header__link {
+        margin-right: 0;
+    }
+
+    /* Grid de especialidades: 1 columna, layout horizontal */
+    .especialidades-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem 1.5rem 6rem 1.5rem;
+        /* espacio bottom para el nav */
+        margin: 0;
+        gap: 0.8rem;
+    }
+
+    .especialidad-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 1.2rem;
+        gap: 1.2rem;
+        border-radius: 20px;
+    }
+
+    .especialidad-card__icon-box {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 0;
+        border-radius: 16px;
+        flex-shrink: 0;
+    }
+
+    .especialidad-card__icon-box svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .especialidad-card__text {
+        flex: 1;
+    }
+
+    .especialidad-card__title {
+        font-size: 1.15rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .especialidad-card__desc {
+        margin-bottom: 0;
+        font-size: 0.85rem;
+    }
+
+    .especialidad-card__link {
+        color: var(--Slate-300);
+        /* slate-300 */
+        font-size: 0;
+        /* ocultamos el texto "Consultar" */
+    }
+
+    .especialidad-card__link svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--Slate-400);
+    }
+
+    /* Ajuste de posicion FAB en mobile para que no tape el bottom nav */
+    .fab-call {
+        bottom: 90px !important;
+        right: 20px !important;
+    }
+
+    /* Ocultar footer en mobile ya que tenemos Bottom Nav */
+    .footer {
+        display: none;
+    }
+}
+
+/* ========================================
+   FLOATING ACTION BUTTON (GLOBAL)
+   ======================================== */
+
+/* Boton flotante de llamada - se muestra en desktop y mobile */
+.fab-call {
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    /* Posicion desktop por defecto */
+    right: 30px;
+    width: 64px;
+    height: 64px;
+    background-color: var(--Emerald-500);
+    /* emerald-500 */
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px var(--EmeraldOpaco-40);
+    z-index: 900;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    animation: pulseFAB 2s infinite;
+    text-decoration: none;
+}
+
+.fab-call:hover {
+    background-color: var(--Emerald-600);
+    /* emerald-600 */
+    transform: scale(1.05);
+    /* crece un poquito en desktop */
+}
+
+.fab-call:active {
+    transform: scale(0.95);
+}
+
+.fab-call svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--TextoClaro);
+}
+
+@keyframes pulseFAB {
+    0% {
+        box-shadow: 0 0 0 0 var(--EmeraldOpaco-70);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
 }

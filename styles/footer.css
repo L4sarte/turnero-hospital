@@ -14,7 +14,7 @@
     color: var(--Textos);
     opacity: 0.5;
     /* suave, no roba protagonismo */
-    border-top: 1px solid rgba(79, 82, 87, 0.15);
+    border-top: 1px solid var(--BordeMedio);
     /* bordecito sutil arriba */
 }
 
